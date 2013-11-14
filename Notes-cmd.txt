@@ -1,0 +1,74 @@
+Sublime Find
+-*/.dist/*, -*/target/*, -*/test/*
+
+-------------------------------------------
+Git commands
+
+Create a branch for your changes
+git checkout -b BUG_description master
+
+Create the upstream branch counterpart / push
+git push origin username-getting-started:username-getting-started
+
+Add files
+git add .
+
+Commit
+git commit -m "message"
+
+Show list all files for a commit
+git show --name-only
+git show --pretty="format:" --name-only <SHA>
+
+Diff of last commit
+git log -p -1
+
+Delete local branch
+git branch -d the_local_branch
+
+Recover deleted branch
+git checkout -b <branch> <sha>
+
+Setting your branch to exactly match the remote branch can be done in two steps:
+git fetch origin
+git reset --hard origin/master
+
+Add to commit
+For the next commit
+git add .   # add to index only files created/modified and not those deleted
+git add -u  # add to index only files deleted/modified and not those created
+git add -A  # do both operation at once, add to index all files
+
+git commit --amend
+
+Rebase
+git rebase -i HEAD~5
+
+-----------------------------------
+http://stackoverflow.com/questions/4556467/git-pull-or-git-merge-between-master-and-development-branches
+
+This workflow works best for me:
+
+git checkout -b develop
+
+...make some changes...
+...notice master has been updated...
+...commit changes to develop...
+
+git checkout master
+git pull
+
+...bring those changes back into develop...
+
+git checkout develop
+git rebase master
+
+...make some more changes...
+...commit them to develop...
+...merge them into master...
+
+git checkout master
+git pull
+git merge develop
+-----------------------------------
+
