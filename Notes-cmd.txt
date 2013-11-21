@@ -53,7 +53,7 @@ git rebase -i HEAD~2
 
 Preview files before pull
 git fetch
-git diff ...origin
+git diff ...origin --name-status
 
 Git Pull equals
 git fetch
