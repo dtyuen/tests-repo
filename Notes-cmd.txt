@@ -51,6 +51,14 @@ git commit --amend
 Rebase
 git rebase -i HEAD~2
 
+Preview files before pull
+git fetch
+git diff ...origin
+
+Git Pull equals
+git fetch
+git merge origin/master
+
 -----------------------------------
 http://stackoverflow.com/questions/4556467/git-pull-or-git-merge-between-master-and-development-branches
 
