@@ -30,6 +30,12 @@ git show --pretty="format:" --name-only <SHA>
 Diff of last commit
 git log -p -1
 
+History of a file
+git log -- [filename]
+
+Revert a file
+git checkout [SHA] [filename]
+
 Delete local branch
 git branch -d the_local_branch
 
