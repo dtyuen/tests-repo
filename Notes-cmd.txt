@@ -12,6 +12,10 @@ git checkout -b BUG_description master
 Create the upstream branch counterpart / push
 git push origin username-getting-started:username-getting-started
 
+Checkout remote branch
+git fetch origin
+git checkout -b test origin/test
+
 Add files
 git add .
 
