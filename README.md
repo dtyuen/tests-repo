@@ -78,7 +78,7 @@ brew install git
 brew install phantomjs
 ```
 
-### Installing Node
+### Installing Node.js
 
 ```shell
 brew install node
