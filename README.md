@@ -22,10 +22,17 @@ rvm implode
 rm -rf ~/.rbenv
 ```
 
+Some useful commands:
+
+```shell
+cd ~        Navigate to home directory
+ls -la      List all files, including hidden files
+```
 Create a `.bash_profile` (or `.zshrc`) file if you don't have one on your home directory (~):
 
 ```shell
 cd ~
+ls -la
 touch .bash_profile
 nano .bash_profile
 ```
@@ -76,6 +83,8 @@ brew install phantomjs
 ```shell
 brew install node
 ```
+
+A useful Sublime Text package that requires Node.js is [Autoprefixer]( https://sublime.wbond.net/packages/Autoprefixer) for CSS vendor-prefixes.
 
 ### Installing Grunt CLI
 
