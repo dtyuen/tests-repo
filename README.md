@@ -2,7 +2,7 @@ tests-repo
 =====
 
 ## How to install Ruby
-(only tested on OSX)
+(These instructions were only tested on Mac OSX.)
 
 ### Install Homebrew
 
@@ -44,6 +44,12 @@ export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 ```
 In nano, `Ctrl+X` to exit and save. When prompted to save, type `Y` for "yes".
+
+Then back in the Terminal prompt:
+
+```shell
+source .bash_profile
+```
 
 At this point quit and restart Terminal for rbenv to take effect.
 
