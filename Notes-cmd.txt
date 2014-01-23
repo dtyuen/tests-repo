@@ -58,6 +58,11 @@ git add -A  # do both operation at once, add to index all files
 
 git commit --amend
 
+vi
+:w  save file
+:q  quit
+:q! discard changes and quit
+
 Rebase
 git rebase -i HEAD~2
 
