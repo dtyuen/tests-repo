@@ -102,3 +102,5 @@ git pull
 git merge develop
 -----------------------------------
 
+Delete git-tracking of a local repository
+rm -rf .git
