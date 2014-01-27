@@ -68,7 +68,14 @@ rbenv rehash
 ```
 Now if you type `ruby -v` in the Terminal, it should print out `ruby 1.9.3-p484`.
 
+
 ## Optional
+
+Some useful commands:
+
+```shell
+gem env       Display information about the RubyGems environment
+```
 
 Now that you have Homebrew, you can easily install other things with `brew`.
 
