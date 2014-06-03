@@ -34,6 +34,12 @@ git show --pretty="format:" --name-only <SHA>
 Diff of last commit
 git log -p -1
 
+Diff of 1 file between 2 commits
+git diff HEAD^^ HEAD <filename>
+
+Revert 1 file to previous commit
+git checkout <commit> <filename>
+
 History of a file
 git log -- [filename]
 
