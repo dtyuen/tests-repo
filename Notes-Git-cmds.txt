@@ -9,6 +9,11 @@ Git commands
 Create a branch for your changes
 git checkout -b BUG_description master
 
+List branch: -a=all local/remote, -r=remote only
+git branch
+git branch -a
+git branch -r
+
 Create the upstream branch counterpart / push
 git push origin username-getting-started:username-getting-started
 
@@ -111,3 +116,9 @@ git merge develop
 
 Delete git-tracking of a local repository
 rm -rf .git
+
+Git warning: you may want to set your diff.renamelimit variable
+http://www.sw33tcode.com/?p=31
+git config merge.renameLimit 999999
+git config --unset merge.renameLimit
+
