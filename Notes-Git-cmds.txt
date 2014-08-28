@@ -59,6 +59,7 @@ Recover deleted branch
 git checkout -b <branch> <sha>
 
 Setting your branch to exactly match the remote branch can be done in two steps:
+Also used to pull after a forced push on remote:
 git fetch origin
 git reset --hard origin/master
 
@@ -79,13 +80,26 @@ i   insert before cursor
 Rebase
 git rebase -i HEAD~2
 
+Undoing a git rebase
+git reflog
+git reset --hard HEAD@{5}
+
 Preview files before pull
 git fetch
 git diff ...origin --name-status
 
-Git Pull equals
+Force pull identical to remote
 git fetch
 git merge origin/master
+- or -
+git fetch origin master
+git reset --hard FETCH_HEAD
+git clean -df
+
+Merge branch as one commit
+git checkout master
+git merge --squash bugfix
+git commit
 
 -----------------------------------
 http://stackoverflow.com/questions/4556467/git-pull-or-git-merge-between-master-and-development-branches
@@ -124,3 +138,9 @@ git config merge.renameLimit 999999
 git config --unset merge.renameLimit
 
 PATH=$PATH:$HOME/bin
+
+Deleted all installed ruby gems
+gem list | cut -d" " -f1 | xargs gem uninstall -aIx
+
+View Gem environment configs
+gem environment
