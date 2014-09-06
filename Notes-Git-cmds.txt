@@ -1,8 +1,4 @@
-Sublime Find
 -------------------------------------------
--*/.dist/*, -*/target/*, -*/test/*
-
-=================================================================
 Git commands
 -------------------------------------------
 
@@ -58,10 +54,14 @@ git branch -d the_local_branch
 Recover deleted branch
 git checkout -b <branch> <sha>
 
+Delete remote branch
+git branch :remote_branch
+
 Setting your branch to exactly match the remote branch can be done in two steps:
 Also used to pull after a forced push on remote:
 git fetch origin
 git reset --hard origin/master
+git clean -df
 
 Add to commit
 # For the next commit
@@ -70,12 +70,6 @@ git add -u  # add to index only files deleted/modified and not those created
 git add -A  # do both operation at once, add to index all files
 
 git commit --amend
-
-vi
-i   insert before cursor
-:w  save file
-:q  quit
-:q! discard changes and quit
 
 Rebase
 git rebase -i HEAD~2
@@ -88,18 +82,23 @@ Preview files before pull
 git fetch
 git diff ...origin --name-status
 
-Force pull identical to remote
+Git pull does these
 git fetch
 git merge origin/master
-- or -
-git fetch origin master
-git reset --hard FETCH_HEAD
-git clean -df
 
 Merge branch as one commit
 git checkout master
 git merge --squash bugfix
 git commit
+
+-----------------------------------
+Delete git-tracking of a local repository
+rm -rf .git
+
+Git warning: you may want to set your diff.renamelimit variable
+http://www.sw33tcode.com/?p=31
+git config merge.renameLimit 999999
+git config --unset merge.renameLimit
 
 -----------------------------------
 http://stackoverflow.com/questions/4556467/git-pull-or-git-merge-between-master-and-development-branches
@@ -127,20 +126,28 @@ git rebase master
 git checkout master
 git pull
 git merge develop
------------------------------------
 
-Delete git-tracking of a local repository
-rm -rf .git
+=================================================================
 
-Git warning: you may want to set your diff.renamelimit variable
-http://www.sw33tcode.com/?p=31
-git config merge.renameLimit 999999
-git config --unset merge.renameLimit
+Sublime Find
+-*/.dist/*, -*/target/*, -*/test/*
 
+-------------------------------------------
+vi commands
+i   insert before cursor
+:w  save file
+:q  quit
+:q! discard changes and quit
+
+-------------------------------------------
 PATH=$PATH:$HOME/bin
 
+-------------------------------------------
 Deleted all installed ruby gems
 gem list | cut -d" " -f1 | xargs gem uninstall -aIx
 
 View Gem environment configs
 gem environment
+
+-------------------------------------------
+
