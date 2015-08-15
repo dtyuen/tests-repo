@@ -18,10 +18,14 @@ git fetch origin
 git checkout -b test origin/test
 
 Add files
-git add .
+git add .   # add to index only files created/modified and not those deleted
+git add -u  # add to index only files deleted/modified and not those created
+git add -A  # do both operation at once, add to index all files
 
 Commit
 git commit -m "message"
+
+git commit --amend
 
 Rename branch
 git branch -m <oldname> <newname>
@@ -34,6 +38,7 @@ git show --pretty="format:" --name-only <SHA>
 
 Diff of last commit
 git log -p -1
+git show <SHA>
 
 Diff of 1 file between 2 commits
 git diff HEAD^^ HEAD <filename>
@@ -51,25 +56,17 @@ git checkout [SHA] [filename]
 Delete local branch
 git branch -d the_local_branch
 
+Delete remote branch
+git push origin :remote_branch
+
 Recover deleted branch
 git checkout -b <branch> <sha>
-
-Delete remote branch
-git branch :remote_branch
 
 Setting your branch to exactly match the remote branch can be done in two steps:
 Also used to pull after a forced push on remote:
 git fetch origin
 git reset --hard origin/master
 git clean -df
-
-Add to commit
-# For the next commit
-git add .   # add to index only files created/modified and not those deleted
-git add -u  # add to index only files deleted/modified and not those created
-git add -A  # do both operation at once, add to index all files
-
-git commit --amend
 
 Rebase
 git rebase -i HEAD~2
