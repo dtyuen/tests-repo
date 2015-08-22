@@ -147,4 +147,8 @@ View Gem environment configs
 gem environment
 
 -------------------------------------------
+vi .bash_profile
+PS1='\n\e[0;32m\u\e[m \e[0;33m\w\e[m\n$ '
+
+-------------------------------------------
 
