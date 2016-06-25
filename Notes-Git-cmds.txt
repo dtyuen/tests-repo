@@ -68,7 +68,7 @@ git fetch origin
 git reset --hard origin/master
 git clean -df
 
-Rebase
+Rebase / Squash
 git rebase -i HEAD~2
 
 Undoing a git rebase
@@ -151,4 +151,25 @@ vi .bash_profile
 PS1='\n\e[0;32m\u\e[m \e[0;33m\w\e[m\n$ '
 
 -------------------------------------------
+
+npm:
+
+npm list --depth=0
+npm list -g
+
+npm view jquery versions
+npm install jquery@1.12.1 --save
+npm uninstall jquery@1.12.1 --save
+npm prune
+
+npm outdated
+npm update jquery --save
+
+npm init --force
+
+delete 'node_modules' folder:
+rm -r node_modules/
+
+var $ = require("jquery");
+
 
