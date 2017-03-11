@@ -226,8 +226,27 @@ select count(*) from <tablename> where username rlike('the');
 
 ----------------------------------------------
 
+Get last row:
+select * from <tablename> order by id desc limit 1;
+
+Get count of rows:
+select count(*) from <tablename>;
+
+----------------------------------------------
+
 backslash to escape: \'
 
 =================================================================
 
+pstree -p <username>
+
+kill -9 <pid>
+
+----------------------------------------------
+
+touch text.txt
+
+stat text.txt
+
+=================================================================
 
