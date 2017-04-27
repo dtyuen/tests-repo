@@ -75,6 +75,12 @@ Undoing a git rebase
 git reflog
 git reset --hard HEAD@{5}
 
+Stash
+git stash
+git stash list
+git stash apply
+git stash clear
+
 Preview files before pull
 git fetch
 git diff ...origin --name-status
