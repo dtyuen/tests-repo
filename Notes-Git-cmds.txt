@@ -206,6 +206,8 @@ delete from <tablename> where id IN(1,2);
 
 alter table <tablename> drop column <columnname>;
 
+alter table <tablename> add column <columnname> <datatype>;
+
 ----------------------------------------------
 
 select * from <tablename>;
@@ -237,6 +239,18 @@ select * from <tablename> order by id desc limit 1;
 
 Get count of rows:
 select count(*) from <tablename>;
+
+----------------------------------------------
+
+select count(*) as count, creator from <tablename> group by (creator) order by count desc limit 10;
+
++-------+---------+
+| count | creator |
++-------+---------+
+| 36030 | name    |
+| 21401 | name    |
++-------+---------+
+10 rows in set (0.08 sec)
 
 ----------------------------------------------
 
