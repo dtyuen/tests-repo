@@ -208,6 +208,12 @@ alter table <tablename> drop column <columnname>;
 
 alter table <tablename> add column <columnname> <datatype>;
 
+alter table <tablename> modify <column> <definitions>; 
+
+drop table <tablename>;
+
+rename table <tablename> to <table_newname>;
+
 ----------------------------------------------
 
 select * from <tablename>;
